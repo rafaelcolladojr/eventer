@@ -7,6 +7,7 @@ class EventerApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Eventer',
       theme: ThemeData(
         primarySwatch: Colors.blue,

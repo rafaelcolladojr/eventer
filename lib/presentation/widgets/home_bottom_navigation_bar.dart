@@ -9,6 +9,7 @@ class HomeBottomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+        backgroundColor: AppColors.foreground,
         iconSize: 36.0,
         selectedItemColor: AppColors.selectedBottomNavigationIcon,
         unselectedItemColor: AppColors.unselectedBottomNavigationIcon,
