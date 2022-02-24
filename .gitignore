@@ -9,6 +9,7 @@
 .history
 .svn/
 test/
+windows/
 web/
 ios/
 android/
