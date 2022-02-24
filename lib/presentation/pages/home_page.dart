@@ -17,6 +17,7 @@ class HomePage extends StatelessWidget {
         bottom: false,
         child: Container(),
       ),
+      bottomNavigationBar: const HomeBottomNavigationBar(),
     );
   }
 }
