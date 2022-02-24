@@ -9,10 +9,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: false,
-        title: const Text('Eventer'),
-      ),
       body: SafeArea(
         bottom: false,
         child: Container(),
