@@ -1,4 +1,5 @@
-import 'package:eventer/presentation/pages/home_page.dart';
+import 'package:eventer/core/constants/app_themes.dart';
+import 'package:eventer/presentation/pages/main_page.dart';
 import 'package:flutter/material.dart';
 
 class EventerApp extends StatelessWidget {
@@ -9,13 +10,11 @@ class EventerApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Eventer',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(appBarTheme: AppThemes.appBarTheme),
       routes: {
-        HomePage.route: (_) => const HomePage(),
+        MainPage.route: (_) => const MainPage(),
       },
-      initialRoute: HomePage.route,
+      initialRoute: MainPage.route,
     );
   }
 }
