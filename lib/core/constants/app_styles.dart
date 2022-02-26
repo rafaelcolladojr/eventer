@@ -14,9 +14,27 @@ class AppStyles {
     fontSize: 17.0,
   );
 
+  static TextStyle header3 = TextStyle(
+    color: AppColors.primary,
+    fontWeight: FontWeight.w700,
+    fontSize: 14.0,
+  );
+
   static TextStyle subtitle = TextStyle(
     color: AppColors.primaryLight,
     fontWeight: FontWeight.w400,
-    fontSize: 14.0,
+    fontSize: 12.0,
+  );
+
+  static TextStyle thumbnailDateMonth = TextStyle(
+    fontSize: 12.0,
+    fontWeight: FontWeight.w400,
+    color: AppColors.primary,
+  );
+
+  static TextStyle thumbnailDateDay = TextStyle(
+    fontSize: 13.0,
+    fontWeight: FontWeight.w600,
+    color: AppColors.secondary,
   );
 }

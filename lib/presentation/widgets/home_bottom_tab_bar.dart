@@ -14,11 +14,11 @@ class HomeBottomTabBar extends StatelessWidget {
     return Container(
       color: AppColors.foreground,
       child: TabBar(
-        padding: const EdgeInsets.symmetric(vertical: 24.0),
+        padding: const EdgeInsets.symmetric(vertical: 20.0),
         unselectedLabelColor: AppColors.unselectedBottomNavigationIcon,
         labelColor: AppColors.selectedBottomNavigationIcon,
         indicatorColor: Colors.transparent,
-        tabs: icons.map((e) => Tab(icon: Icon(e, size: 36.0))).toList(),
+        tabs: icons.map((e) => Tab(icon: Icon(e, size: 28.0))).toList(),
       ),
     );
   }
