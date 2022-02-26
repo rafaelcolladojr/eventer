@@ -19,7 +19,7 @@ class MainPage extends StatelessWidget {
               Expanded(
                   child: TabBarView(
                 children: [
-                  const HomePage(),
+                  HomePage(),
                   Container(),
                   Container(),
                   Container(),

@@ -6,7 +6,20 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class EventSquareThumbnail extends StatelessWidget {
-  const EventSquareThumbnail({Key? key}) : super(key: key);
+  const EventSquareThumbnail({
+    Key? key,
+    required this.image,
+    required this.title,
+    required this.location,
+    required this.month,
+    required this.day,
+  }) : super(key: key);
+
+  final Image image;
+  final String title;
+  final String location;
+  final String month;
+  final String day;
 
   @override
   Widget build(BuildContext context) {
@@ -25,16 +38,13 @@ class EventSquareThumbnail extends StatelessWidget {
               aspectRatio: 1 / 1,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16.0),
-                child: Image.asset(
-                  'assets/images/lantern-festival.png',
-                  fit: BoxFit.fill,
-                ),
+                child: image,
               ),
             ),
-            const Positioned(
+            Positioned(
               top: 8.0,
               right: 8.0,
-              child: DateTag(month: 'Feb', day: '12'),
+              child: DateTag(month: month, day: day),
             ),
             Positioned(
               bottom: -35.0,
@@ -54,8 +64,8 @@ class EventSquareThumbnail extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Lantern Festival', style: AppStyles.header3),
-                        const LocationTag(location: 'Pontianak, Indonesia'),
+                        Text(title, style: AppStyles.header3),
+                        LocationTag(location: location),
                       ],
                     ),
                     Container(

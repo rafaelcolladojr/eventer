@@ -5,10 +5,12 @@ import 'package:flutter/material.dart';
 class DateTag extends StatelessWidget {
   const DateTag({
     Key? key,
+    this.color,
     required this.month,
     required this.day,
   }) : super(key: key);
 
+  final Color? color;
   final String month;
   final String day;
 
@@ -17,7 +19,7 @@ class DateTag extends StatelessWidget {
     return Container(
       height: 52.0,
       decoration: BoxDecoration(
-        color: AppColors.foreground,
+        color: color ?? AppColors.foreground,
         borderRadius: BorderRadius.circular(12.0),
       ),
       child: Padding(
@@ -25,8 +27,8 @@ class DateTag extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Feb', style: AppStyles.thumbnailDateMonth),
-            Text('12', style: AppStyles.thumbnailDateDay),
+            Text(month, style: AppStyles.thumbnailDateMonth),
+            Text(day, style: AppStyles.thumbnailDateDay),
           ],
         ),
       ),
