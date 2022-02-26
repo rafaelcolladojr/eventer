@@ -2,6 +2,8 @@ import 'package:eventer/core/constants/app_colors.dart';
 import 'package:eventer/core/constants/app_numbers.dart';
 import 'package:eventer/core/constants/app_styles.dart';
 import 'package:eventer/presentation/widgets/custom_text_field.dart';
+import 'package:eventer/presentation/widgets/event_square_thumbnail.dart';
+import 'package:eventer/presentation/widgets/section_header.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -54,20 +56,16 @@ class HomePage extends StatelessWidget {
                   hint: 'Search event...',
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Popular Events', style: AppStyles.header2),
-                  TextButton(
-                    child: const Text('View All'),
-                    onPressed: () {},
-                    style: ButtonStyle(
-                      foregroundColor: MaterialStateColor.resolveWith((states) => AppColors.primaryLight),
-                    ),
-                  ),
-                ],
-              ),
+              const SectionHeader(title: 'Popular Events'),
             ],
+          ),
+        ),
+        SizedBox(
+          height: 300.0,
+          child: ListView.separated(
+            itemBuilder: (_, __) => const EventSquareThumbnail(),
+            separatorBuilder: (_, __) => const Spacer(),
+            itemCount: 1,
           ),
         ),
       ],
