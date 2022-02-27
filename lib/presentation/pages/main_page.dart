@@ -20,9 +20,9 @@ class MainPage extends StatelessWidget {
                   child: TabBarView(
                 children: [
                   HomePage(),
-                  Container(),
-                  Container(),
-                  Container(),
+                  Center(child: Text('Coming Soon')),
+                  Center(child: Text('Coming Soon')),
+                  Center(child: Text('Coming Soon')),
                 ],
               )),
               const HomeBottomTabBar(
