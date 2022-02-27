@@ -10,15 +10,18 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
 
-  final List<EventSquareThumbnail> popularEvents = [
-    EventSquareThumbnail(
-      image: Image.asset(
-        'assets/images/lantern-festival.png',
+  final List<Widget> popularEvents = [
+    Hero(
+      tag: 'event',
+      child: EventSquareThumbnail(
+        image: Image.asset(
+          'assets/images/lantern-festival.png',
+        ),
+        title: 'Lantern Festival',
+        location: 'Pontianak, Indonesia',
+        month: 'Feb',
+        day: '12',
       ),
-      title: 'Lantern Festival',
-      location: 'Pontianak, Indonesia',
-      month: 'Feb',
-      day: '12',
     ),
     EventSquareThumbnail(
       image: Image.asset(

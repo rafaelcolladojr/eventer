@@ -1,5 +1,6 @@
 import 'package:eventer/core/constants/app_colors.dart';
 import 'package:eventer/core/constants/app_styles.dart';
+import 'package:eventer/presentation/pages/event_details_page.dart';
 import 'package:eventer/presentation/widgets/date_tag.dart';
 import 'package:eventer/presentation/widgets/location_tag.dart';
 import 'package:flutter/material.dart';
@@ -25,67 +26,70 @@ class EventSquareThumbnail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16.0),
-        color: AppColors.foreground,
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Stack(
-          clipBehavior: Clip.none,
-          alignment: AlignmentDirectional.bottomCenter,
-          children: [
-            AspectRatio(
-              aspectRatio: 1 / 1,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(16.0),
-                child: image,
+    return GestureDetector(
+      onTap: () => Navigator.pushNamed(context, EventDetailsPage.route),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16.0),
+          color: AppColors.foreground,
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Stack(
+            clipBehavior: Clip.none,
+            alignment: AlignmentDirectional.bottomCenter,
+            children: [
+              AspectRatio(
+                aspectRatio: 1 / 1,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(16.0),
+                  child: image,
+                ),
               ),
-            ),
-            Positioned(
-              top: 8.0,
-              right: 8.0,
-              child: DateTag(month: month, day: day),
-            ),
-            Visibility(
-              visible: tagged!,
-              child: Positioned(
-                bottom: -35.0,
-                child: Container(
-                  width: 210.0,
-                  height: 70.0,
-                  padding: const EdgeInsets.all(12.0),
-                  decoration: BoxDecoration(
-                    color: AppColors.foreground,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(title, style: AppStyles.header3),
-                          LocationTag(location: location),
-                        ],
-                      ),
-                      Container(
-                        padding: const EdgeInsets.all(8.0),
-                        decoration: BoxDecoration(
-                          color: AppColors.secondaryLight,
-                          borderRadius: BorderRadius.circular(8.0),
+              Positioned(
+                top: 8.0,
+                right: 8.0,
+                child: DateTag(month: month, day: day),
+              ),
+              Visibility(
+                visible: tagged!,
+                child: Positioned(
+                  bottom: -35.0,
+                  child: Container(
+                    width: 210.0,
+                    height: 70.0,
+                    padding: const EdgeInsets.all(12.0),
+                    decoration: BoxDecoration(
+                      color: AppColors.foreground,
+                      borderRadius: BorderRadius.circular(14.0),
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(title, style: AppStyles.header3),
+                            LocationTag(location: location),
+                          ],
                         ),
-                        child: Icon(FontAwesomeIcons.route, color: AppColors.secondary, size: 18.0),
-                      ),
-                    ],
+                        Container(
+                          padding: const EdgeInsets.all(8.0),
+                          decoration: BoxDecoration(
+                            color: AppColors.secondaryLight,
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                          child: Icon(FontAwesomeIcons.route, color: AppColors.secondary, size: 18.0),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

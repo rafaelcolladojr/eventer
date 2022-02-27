@@ -38,13 +38,16 @@ class EventDetailsPage extends StatelessWidget {
                   ],
                 ),
               ),
-              EventSquareThumbnail(
-                image: Image.asset('assets/images/lantern-festival.png'),
-                title: 'Lantern Festival',
-                location: 'Pontianak, Indonesia',
-                month: 'Feb',
-                day: '12',
-                tagged: false,
+              Hero(
+                tag: 'event',
+                child: EventSquareThumbnail(
+                  image: Image.asset('assets/images/lantern-festival.png'),
+                  title: 'Lantern Festival',
+                  location: 'Pontianak, Indonesia',
+                  month: 'Feb',
+                  day: '12',
+                  tagged: false,
+                ),
               ),
             ],
           ),
