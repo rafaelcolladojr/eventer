@@ -37,4 +37,10 @@ class AppStyles {
     fontWeight: FontWeight.w600,
     color: AppColors.secondary,
   );
+
+  static TextStyle detailText = TextStyle(
+    fontSize: 12.0,
+    fontWeight: FontWeight.w600,
+    color: AppColors.secondary,
+  );
 }

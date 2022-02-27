@@ -70,12 +70,10 @@ class EventHorizontalThumbnail extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              Text('250+ Joined',
-                                  style: TextStyle(
-                                    fontSize: 12.0,
-                                    fontWeight: FontWeight.w600,
-                                    color: AppColors.secondary,
-                                  ))
+                              Text(
+                                '250+ Joined',
+                                style: AppStyles.detailText,
+                              )
                             ],
                           ),
                         ],
