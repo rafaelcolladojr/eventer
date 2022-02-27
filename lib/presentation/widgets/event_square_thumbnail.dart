@@ -13,6 +13,7 @@ class EventSquareThumbnail extends StatelessWidget {
     required this.location,
     required this.month,
     required this.day,
+    this.tagged = true,
   }) : super(key: key);
 
   final Image image;
@@ -20,6 +21,7 @@ class EventSquareThumbnail extends StatelessWidget {
   final String location;
   final String month;
   final String day;
+  final bool? tagged;
 
   @override
   Widget build(BuildContext context) {
@@ -46,37 +48,40 @@ class EventSquareThumbnail extends StatelessWidget {
               right: 8.0,
               child: DateTag(month: month, day: day),
             ),
-            Positioned(
-              bottom: -35.0,
-              child: Container(
-                width: 210.0,
-                height: 70.0,
-                padding: const EdgeInsets.all(12.0),
-                decoration: BoxDecoration(
-                  color: AppColors.foreground,
-                  borderRadius: BorderRadius.circular(14.0),
-                ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(title, style: AppStyles.header3),
-                        LocationTag(location: location),
-                      ],
-                    ),
-                    Container(
-                      padding: const EdgeInsets.all(8.0),
-                      decoration: BoxDecoration(
-                        color: AppColors.secondaryLight,
-                        borderRadius: BorderRadius.circular(8.0),
+            Visibility(
+              visible: tagged!,
+              child: Positioned(
+                bottom: -35.0,
+                child: Container(
+                  width: 210.0,
+                  height: 70.0,
+                  padding: const EdgeInsets.all(12.0),
+                  decoration: BoxDecoration(
+                    color: AppColors.foreground,
+                    borderRadius: BorderRadius.circular(14.0),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(title, style: AppStyles.header3),
+                          LocationTag(location: location),
+                        ],
                       ),
-                      child: Icon(FontAwesomeIcons.route, color: AppColors.secondary, size: 18.0),
-                    ),
-                  ],
+                      Container(
+                        padding: const EdgeInsets.all(8.0),
+                        decoration: BoxDecoration(
+                          color: AppColors.secondaryLight,
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                        child: Icon(FontAwesomeIcons.route, color: AppColors.secondary, size: 18.0),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
