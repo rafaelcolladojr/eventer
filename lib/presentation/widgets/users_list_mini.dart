@@ -1,3 +1,4 @@
+import 'package:eventer/presentation/widgets/bordered_circle_avatar.dart';
 import 'package:flutter/material.dart';
 
 class UserListMini extends StatelessWidget {
@@ -15,28 +16,21 @@ class UserListMini extends StatelessWidget {
   List<Widget> getAvatarList(List<ImageProvider>? avatars) {
     if (avatars == null || avatars.isEmpty) {
       return [
-        CircleAvatar(
+        BorderedCircleAvatar(
           child: const Icon(Icons.person, color: Colors.grey),
-          radius: size!,
-          backgroundColor: Colors.white,
+          size: size!,
         ),
       ];
     } else {
       List<Widget> widgets = [];
-      widgets.add(CircleAvatar(
-        backgroundImage: avatars[0],
-        radius: size,
-        backgroundColor: Colors.white,
-      ));
+      widgets.add(
+        BorderedCircleAvatar(image: avatars[0], size: size!),
+      );
 
       for (var i = 1; i < avatars.length; i++) {
         widgets.add(Positioned(
           left: offset! * i,
-          child: CircleAvatar(
-            backgroundImage: avatars[i],
-            radius: size,
-            backgroundColor: Colors.white,
-          ),
+          child: BorderedCircleAvatar(image: avatars[i], size: size!),
         ));
       }
 
