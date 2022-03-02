@@ -43,4 +43,16 @@ class AppStyles {
     fontWeight: FontWeight.w600,
     color: AppColors.secondary,
   );
+
+  static TextStyle detailPriceTag = TextStyle(
+    fontSize: 16.0,
+    fontWeight: FontWeight.w600,
+    color: AppColors.secondary,
+  );
+
+  static TextStyle buttonText = TextStyle(
+    fontSize: 14.0,
+    fontWeight: FontWeight.w500,
+    color: AppColors.background,
+  );
 }
