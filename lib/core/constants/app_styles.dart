@@ -26,6 +26,13 @@ class AppStyles {
     fontSize: 12.0,
   );
 
+  static TextStyle eventDescriptionText = TextStyle(
+    color: AppColors.primaryLight,
+    fontWeight: FontWeight.w400,
+    height: 1.8,
+    fontSize: 12.0,
+  );
+
   static TextStyle thumbnailDateMonth = TextStyle(
     fontSize: 12.0,
     fontWeight: FontWeight.w400,
