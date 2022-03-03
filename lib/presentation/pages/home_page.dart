@@ -1,5 +1,6 @@
 import 'package:eventer/core/constants/app_colors.dart';
 import 'package:eventer/core/constants/app_numbers.dart';
+import 'package:eventer/presentation/pages/event_details_page.dart';
 import 'package:eventer/presentation/widgets/custom_text_field.dart';
 import 'package:eventer/presentation/widgets/event_horizontal_thumbnail.dart';
 import 'package:eventer/presentation/widgets/event_square_thumbnail.dart';
@@ -9,27 +10,6 @@ import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
-
-  final List<Widget> popularEvents = [
-    EventSquareThumbnail(
-      image: Image.asset(
-        'assets/images/lantern-festival.png',
-      ),
-      title: 'Lantern Festival',
-      location: 'Pontianak, Indonesia',
-      month: 'Feb',
-      day: '12',
-    ),
-    EventSquareThumbnail(
-      image: Image.asset(
-        'assets/images/dancing-festival.png',
-      ),
-      title: 'Dancing Festival',
-      location: 'Pontianak, Indonesia',
-      month: 'Feb',
-      day: '14',
-    ),
-  ];
 
   final List<EventHorizontalThumbnail> monthEvents = [
     EventHorizontalThumbnail(
@@ -101,9 +81,29 @@ class HomePage extends StatelessWidget {
               clipBehavior: Clip.none,
               scrollDirection: Axis.horizontal,
               padding: const EdgeInsets.symmetric(horizontal: 24.0),
-              itemBuilder: (_, index) => popularEvents[index],
+              itemBuilder: (_, index) => [
+                EventSquareThumbnail(
+                  image: Image.asset(
+                    'assets/images/lantern-festival.png',
+                  ),
+                  title: 'Lantern Festival',
+                  location: 'Pontianak, Indonesia',
+                  month: 'Feb',
+                  day: '12',
+                  onTap: () => Navigator.pushNamed(context, EventDetailsPage.route),
+                ),
+                EventSquareThumbnail(
+                  image: Image.asset(
+                    'assets/images/dancing-festival.png',
+                  ),
+                  title: 'Dancing Festival',
+                  location: 'Pontianak, Indonesia',
+                  month: 'Feb',
+                  day: '14',
+                ),
+              ][index],
               separatorBuilder: (_, __) => const SizedBox(width: 24.0),
-              itemCount: popularEvents.length,
+              itemCount: 2,
             ),
           ),
           Padding(

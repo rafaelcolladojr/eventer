@@ -53,6 +53,7 @@ class EventDetailsPage extends StatelessWidget {
                     month: 'Feb',
                     day: '12',
                     tagged: false,
+                    onTap: null,
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
