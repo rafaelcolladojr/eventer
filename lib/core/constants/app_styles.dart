@@ -20,6 +20,12 @@ class AppStyles {
     fontSize: 14.0,
   );
 
+  static TextStyle header4 = TextStyle(
+    color: AppColors.primary,
+    fontWeight: FontWeight.w700,
+    fontSize: 14.0,
+  );
+
   static TextStyle subtitle = TextStyle(
     color: AppColors.primaryLight,
     fontWeight: FontWeight.w400,

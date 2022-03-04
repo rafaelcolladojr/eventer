@@ -1,5 +1,6 @@
 import 'package:eventer/core/constants/app_colors.dart';
 import 'package:eventer/core/constants/app_styles.dart';
+import 'package:eventer/presentation/pages/ticket_page.dart';
 import 'package:flutter/material.dart';
 
 class TicketPriceBottomBar extends StatelessWidget {
@@ -54,7 +55,7 @@ class TicketPriceBottomBar extends StatelessWidget {
                 child: Material(
                   color: AppColors.secondary,
                   child: InkWell(
-                    onTap: () {},
+                    onTap: () => Navigator.pushNamed(context, TicketPage.route),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
                       child: Text('Get a Ticket', style: AppStyles.buttonText),

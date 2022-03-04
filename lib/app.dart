@@ -1,6 +1,7 @@
 import 'package:eventer/core/constants/app_themes.dart';
 import 'package:eventer/presentation/pages/event_details_page.dart';
 import 'package:eventer/presentation/pages/main_page.dart';
+import 'package:eventer/presentation/pages/ticket_page.dart';
 import 'package:flutter/material.dart';
 
 class EventerApp extends StatelessWidget {
@@ -15,6 +16,7 @@ class EventerApp extends StatelessWidget {
       routes: {
         MainPage.route: (_) => const MainPage(),
         EventDetailsPage.route: (_) => const EventDetailsPage(),
+        TicketPage.route: (_) => const TicketPage(),
       },
       initialRoute: MainPage.route,
     );
