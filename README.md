@@ -18,9 +18,12 @@
 
 ## Inspiration
 
-This application's interface was completely borrowed from [a design](https://dribbble.com/shots/15718338-Task-Management-App-Project-Management) by [Andri.](https://dribbble.com/andri145) of [Picko Lab](https://dribbble.com/Pickolab) on dribbble. All credit for the graphic design used in this project goes to him. Feel free to check out his other works.
+This application's interface was completely borrowed from [a design](https://dribbble.com/shots/15718338-Task-Management-App-Project-Management) by [Andri.](https://dribbble.com/andri145) of [Picko Lab](https://dribbble.com/Pickolab) on dribbble. All credit for the graphic design used in this project goes to him. Feel free to check out their other works.
 
-<!-- The illustration used in the welcome screen was designed by [Cami](https://dribbble.com/camidobrin). -->
+![eventer-inspo](https://user-images.githubusercontent.com/7101404/156842235-bffa41e2-8662-4483-89e7-623668e13df7.png)
+
+
+The illustrations used in this mock were designed by [Maya Nguyen](https://dribbble.com/mayanguyen). -->
 
 ## Fork & Setup
 
