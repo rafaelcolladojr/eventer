@@ -10,9 +10,10 @@
 
 </br>
 
-<!-- <kbd>
-<img src="https://github.com/rafaelcolladojr/taskster/raw/master/images/taskster_demo.gif" width="256" />
-</kbd> -->
+<kbd>
+<img src="https://user-images.githubusercontent.com/7101404/156890026-8dca96c9-3f00-4752-bc74-e823f480054c.gif" width="256" />
+
+</kbd>
 
 </div>
 
