@@ -19,7 +19,7 @@
 
 ## Inspiration
 
-This application's interface was completely borrowed from [a design](https://dribbble.com/shots/15718338-Task-Management-App-Project-Management) by [Andri.](https://dribbble.com/andri145) of [Picko Lab](https://dribbble.com/Pickolab) on dribbble. All credit for the graphic design used in this project goes to him. Feel free to check out their other works.
+This application's interface was completely borrowed from [a design](https://dribbble.com/shots/17444328-Event-Mobile-Apps-Design) by [Andri.](https://dribbble.com/andri145) of [Picko Lab](https://dribbble.com/Pickolab) on dribbble. All credit for the graphic design used in this project goes to him. Feel free to check out their other works.
 
 </br>
 
